@@ -2,8 +2,6 @@ import pygame
 import time
 from pygame.locals import *
 
-# posprawdzac wi i he - ktore powinno byc ktorym gdzie !
-
 WI, HE = 400, 400
 ELEMENT_SIZE = 10
 ELS_IN_1D = WI//ELEMENT_SIZE # how many in one direction
