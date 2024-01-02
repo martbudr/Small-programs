@@ -1,2 +1,2 @@
 # Small-programs
-Small programs that don't need their own repositories
+Mini-projects that don't need their own repositories
