@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--title-->
+  <title>Currency Converter | martbudr</title>
+  <!--styles-->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main>
+    <h1>Currency converter</h1>
+    
+    <select id="currencyFrom"></select>
+    <select id="currencyTo"></select>
+    <br/>
+    <p id="error">&nbsp</p>
+    <input id="amtToConvert" type="number" value="0.00" min="0" step="0.01"/>
+
+    <br/>
+    <button id="convert" onclick="onConvert()">Convert</button>
+
+    <h1 id="resultAmount">0.00 USD</h1>
+    <!--dodac za liczba znak waluty obecnie wybranej-->
+  </main>
+
+  <script src="index.js"></script>
+</body>

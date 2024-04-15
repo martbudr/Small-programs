@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* disable arrows next to the input field */
+/* Chrome, Safari, Edge, Opera */
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+body{
+  background-color: cornsilk;
+
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+main{
+  background-color: cornflowerblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  border-radius: 10px;
+  padding: 50px;
+}
+
+select{
+  padding: 5px;
+  padding-inline: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+#error{
+  font-size: small;
+}
+
+input{
+  text-align: right;
+  padding-inline: 5px;
+}
+
+button{
+  margin: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  text-transform:uppercase;
+}
+
+/* set the display to be max a fixed amount of characters */
+#resultAmount{
+  text-transform: uppercase;
+}
