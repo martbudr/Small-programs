@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Red+Hat+Display:wght@500;700;900&display=swap');
+@media (max-width: 800px){
+    body{
+        background-image: url('/images/pattern-background-mobile.svg');
+    }
+    section{
+        width: 80%;
+        height: auto;
+    }
+    article{
+        padding: 15px;
+    }
+}
+@media (min-width: 801px){
+    body{
+        background-image: url('/images/pattern-background-desktop.svg');
+    }
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(225, 100%, 94%);
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+    font-family: 'Red Hat Display';
+    color: hsl(224, 23%, 55%);
+}
+
+img{
+    max-width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+main{
+    background-color: white;
+    text-align: center;
+    height: auto;
+    width: 400px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+article{
+    padding: 35px;
+    padding-top: 0;
+}
+
+h1{
+    font-size: 23px;
+    font-weight: 900;
+    line-height: normal;
+    color: hsl(223, 47%, 23%);
+}
+
+.flex-container{
+    display: flex;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.flex-container > div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.plan{
+    padding-left: 0;
+    text-align: left;
+    font-size: 14px;
+}
+.icon{
+    padding-right: 0;
+}
+.change{
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 700;
+    padding-right: 20px;
+}
+b{
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+}
+a{
+    color: hsl(245, 75%, 52%);
+}
+
+.proceed, .cancel{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.proceed{
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+}
+
+.cancel{
+    padding-bottom: 0;
+}
+
+
+a:active{
+    text-decoration: none;
+    color: hsl(245, 93%, 68%);
+}
+.proceed:active{
+    background-color:hsl(245, 93%, 68%);
+}
+.cancel:active{
+    color: hsl(223, 47%, 23%);
+}
+
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: hsl(228, 45%, 44%); 
+}
