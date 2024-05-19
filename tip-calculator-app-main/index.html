@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <script src="functions.js"></script>
+  <link rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body>
+
+  <div class="layout-of-all">
+    
+    <!-- Lewa strona -->
+    <div class="options">
+      <form>
+        <label for="bill">Bill</label>
+        <div class="inputWithIcon">
+          <input id="bill" value="0" onkeydown="setButton('reset')"/>
+          <img src="images/icon-dollar.svg" alt="iconDollar"/>
+        </div>
+        <br>
+        
+        <label for="customButton">Select Tip %</label>
+        <div class="buttons">
+          <button type="button" id="005" onclick="setButton('005', 0.05);">5%</button>
+          <button type="button" id="01" onclick="setButton('01', 0.1);">10%</button>
+          <button type="button" id="015" onclick="setButton('015', 0.15);">15%</button>
+          <button type="button" id="025" onclick="setButton('025', 0.25);">25%</button>
+          <button type="button" id="05" onclick="setButton('05', 0.5);">50%</button>
+          <input id="customButton" value="Custom" onkeydown="validateNumber(); calc(-1);"/>
+        </div>
+        <br>
+        
+        <div class="two-texts">
+          <label for="numberOfPeople">Number of People</label>
+          <div id="errorMessage"></div>
+        </div>
+        <div class="inputWithIcon">
+          <input id="numberOfPeople" value="0" onkeydown="setButton('reset')"/>
+          <img src="images/icon-person.svg" alt="iconPerson"/>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Prawa strona -->
+    <div class="summary">
+      <div class="amounts">
+        <div class="two-columns-grid">
+          <div>
+            <p>Tip Amount</p>
+            <small>/ person</small>
+          </div>
+          <div class="result">
+            <p id="tipPerPerson">$0.00</p>
+          </div>
+        </div>
+        <br><br>
+      
+        <div class="two-columns-grid">
+          <div>
+            <p>Total</p>
+            <small>/ person</small>
+          </div>
+          <div class="result">
+            <p id="totalPerPerson">$0.00</p>
+          </div>
+        </div>
+      </div>
+    
+      <button id="reset" onclick="reset()">RESET</button>
+
+    </div>
+  </div>
+  
+  <!-- Stopka -->
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/martbudr" target="_blank">Martyna Budrewicz</a>.
+  </footer>
+</body>
+</html>

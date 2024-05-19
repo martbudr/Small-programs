@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono:wght@700&display=swap');
+
+/* Colors */
+:root{
+    --strongCyan: hsl(172, 67%, 45%);
+    --lightCyan: hsl(172, 56%, 65%);
+    --darkCyan: hsl(183, 100%, 15%);
+    --resetButton: hsl(183, 98%, 21%);
+    --veryGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Layout and colors of entire page */
+.layout-of-all, button, input, .attribution{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+body{
+    background-color: var(--lightGrayishCyan);
+}
+
+.layout-of-all{
+    display: block;
+    
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    border-radius: 20px;
+}
+@media (min-width:768px){
+    .layout-of-all{
+        display: grid;
+        direction: row;
+        grid-template-columns: 50% 50%;
+        width: auto;
+        max-width: 768px;
+        min-height: 380px;
+    }
+}
+
+
+/* CSS for two main divs of the page */
+.options{
+    margin: 40px;
+}
+
+.summary{
+    margin: 25px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--darkCyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (min-width:768px){
+    .options{
+        margin-right: 25px;
+    }
+    .summary{
+        margin-left: 20px;
+    }
+}
+
+
+/* CSS for Bill and Number of people boxes */
+label{
+    color: var(--veryGrayishCyan);
+}
+/* Code for icons */
+.inputWithIcon{
+    position: relative;
+}
+.inputWithIcon img{
+    position: absolute;
+    left: 15px;
+    top: 22px;
+}
+/* Input text and fields */
+input{
+    color: var(--grayishCyan);
+    background-color: var(--veryLightGrayishCyan);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 24px;
+
+    text-align: right;
+    text-indent: 10px;
+    direction: rtl;
+
+    margin-top: 10px;
+}
+input:focus, #customButton:focus{
+   border-color: var(--strongCyan);
+   color: var(--darkCyan);
+}
+#bill{
+    margin-bottom: 10px;
+}
+
+/* CSS for buttons */
+button, #customButton{
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 24px;
+}
+
+button{
+    background-color: var(--darkCyan);
+    color: var(--white);
+}
+button:active{
+    background-color: var(--lightCyan);
+    color: var(--darkCyan);
+}
+
+#customButton{
+    padding: 0;
+    margin-top: 0;
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--veryGrayishCyan);
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    row-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (min-width:768px){
+    .buttons{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+/* CSS for 'Can't be zero' */
+.two-texts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#errorMessage{
+    color: hsl(22, 82%, 47%);
+    text-align: right;
+}
+
+
+
+/* Second main div */
+
+/* CSS for making amounts be in different column than the descriptions */
+.two-columns-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+p{
+    color: var(--white);
+    margin: 0;
+}
+small{
+    color: var(--grayishCyan);
+}
+
+.result{ /* Do zmiany - bez sensu kod */
+    text-align: right;
+}
+#tipPerPerson, #totalPerPerson{
+    color: var(--strongCyan);
+    font-size: 38px;
+    display: inline-block;
+}
+
+/* Reset button*/
+#reset{
+    color: var(--darkCyan);
+    background-color: var(--resetButton);
+    width: 100%;
+    font-size: medium;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+#reset:active{
+    background-color: var(--lightCyan);
+    color: var(--darkCyan);
+}
+
+
+
+/* Footer */
+footer{ 
+    font-size: 11px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
