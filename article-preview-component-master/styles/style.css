@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  --border-radius: 10px;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+
+  background-color: var(--light-grayish-blue);
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  margin-inline: 5%;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#drawers-photo{
+  height: auto;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+#text-element{
+  position: relative;
+  background-color: white;
+
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+#content{
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+h1{
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  margin-top: 0;
+  font-size: large;
+  font-weight: 700;
+}
+p{
+  color: var(--desaturated-dark-blue);
+}
+
+#michelle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-inline-start: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#michelle-photo{
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+}
+#michelle-name{
+  padding-left: 15px;
+}
+
+h5{
+  margin: 0;
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+}
+h6{
+  margin: 0;
+  color: var(--grayish-blue);
+}
+
+
+#share-button{
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  
+  background-color: var(--light-grayish-blue);
+
+  border: none;
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+
+  padding: 0;
+}
+#button-icon{
+  height: 13px;
+  width: 15px;
+}
+#button-icon path{
+  fill: blue;
+}
+
+#share-menu{
+  background-color: var(--very-dark-grayish-blue);
+  padding-inline: 40px;
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  display: none;
+}
+#share-menu-triangle{
+  display: none;
+}
+b{
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 3px;
+  
+  padding-right: 10px;
+}
+.app-icon{
+  padding-inline: 7px;
+}
+.app-icon:last-child{
+  padding-right: 0;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: x-small;
+  color: var(--very-dark-grayish-blue);
+}
+footer>a{
+  text-decoration: none;
+  color: var(--desaturated-dark-blue);
+}
+
+@media (max-width: 48em) {
+  #drawers-photo{
+    width: 100%;
+  }
+
+  #share-menu{
+    background-color: var(--very-dark-grayish-blue);
+
+    display:block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+
+    display: none;
+  }
+}
+
+@media (min-width: 48em) {
+  main{
+    flex-direction: row;
+
+    align-self: center;
+
+    background-color: white;
+    border-radius: var(--border-radius);
+
+    height: 20em;
+    width: 60em;
+  }
+
+  #text-element{
+    width: 65%;
+  }
+
+  #drawers-photo-element{
+    height: inherit;
+    width: 35%;
+  }
+  #drawers-photo{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius);
+
+    height: 100%;
+    width: 100%;
+  }
+
+  #michelle{
+    padding-bottom: 0;
+  }
+  #share-button{
+    bottom: 10px;
+  }
+
+  #share-menu{
+    width: fit-content;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-inline: 30px;
+
+    position: absolute;
+    bottom: 70px;
+    right: -70px;
+
+    border-radius: 8px;
+  
+  }
+  #share-menu-triangle{
+    background-color: var(--very-dark-grayish-blue);
+
+    height: 20px;
+    width: 20px;
+
+    -webkit-transform: rotate(45deg);
+    transform: 0;
+    position: absolute;
+    bottom: 60px;
+    right: 35px;
+  }
+}
