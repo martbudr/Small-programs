@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.btn-filter-active {
+  @apply bg-[var(--red-700)] dark:bg-[var(--red-400)] text-[var(--neutral-0)] dark:text-[var(--neutral-800)]
+  hover:bg-[var(--red-500)] dark:hover:bg-[var(--red-500)] focus:outline-2 focus:outline-offset-2 
+  focus:outline-[var(--red-700)] dark:focus:outline-[var(--red-500)]
+    m-2 rounded-full px-4 py-2 shadow-sm font-[500] dark:font-[400] dark:border-1 dark:border-[var(--neutral-600)];
+}
+
+.btn-filter-inactive {
+  @apply bg-[var(--neutral-0)] dark:bg-[var(--neutral-800)] text-[var(--neutral-900)] dark:text-[var(--neutral-100)] 
+    active:bg-[var(--red-700)] focus:outline-2 focus:outline-offset-2 focus:outline-[var(--red-700)] dark:focus:outline-[var(--red-500)]
+  hover:bg-[var(--neutral-0)]/50 hover:text-[var(--neutral-900)]/50 dark:hover:bg-[var(--neutral-600)] dark:hover:text-[var(--neutral-0)]
+    m-2 rounded-full px-4 py-2 shadow-sm font-[500] dark:font-[400] dark:border-1 dark:border-[var(--neutral-600)];
+}
+
+@theme {
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
+  --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  @apply bg-[image:var(--light-gradient)] dark:bg-[image:var(--dark-gradient)];
+}
